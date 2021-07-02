@@ -1,0 +1,68 @@
+$primary-color: #fdfdfd;
+$dark-background :#010340;
+$shadow-color: #757e82;
+
+body {
+    background: #010340;
+}
+
+.lovebird {
+    width: 150px;
+    height: 150px;
+    background: $dark-background;
+    box-shadow: inset 0 0 0px 30px $primary-color;
+    margin: 150px auto;
+    position: relative;
+    transform: rotate(45deg);
+    &::before {
+        content: "";
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 30px solid $primary-color;
+        position: absolute;
+        left: 1px;
+        top: -25px;
+        transform: rotate(135deg);
+    }
+    &::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        bottom: -29px;
+        background: $primary-color;
+        box-shadow: 0 15px 0 $shadow-color, 0 40px 0 $primary-color, -29px 0 0 $primary-color, 29px -120px 0 $primary-color;
+    }
+    .eye {
+        width: 10px;
+        height: 10px;
+        border-left: 5px solid $dark-background;
+        border-bottom: 5px solid $dark-background;
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        transform: rotate(270deg);
+        position: absolute;
+        left: 5px;
+        top: -22px;
+        border-radius: 50%;
+    }
+}
+
+@keyframes showin {
+    0% {
+        transform: scale(0);
+    }
+    75% {
+        transform: scale(1);
+    }
+    80% {
+        transform: skewX(5deg);
+    }
+    90% {
+        transform: skewX(-5deg);
+    }
+    100% {
+        transform: skewX(0);
+    }
+}

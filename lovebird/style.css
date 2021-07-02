@@ -1,0 +1,101 @@
+body {
+  background: #010340;
+}
+
+.lovebird {
+  width: 150px;
+  height: 150px;
+  background: #010340;
+  -webkit-box-shadow: inset 0 0 0px 30px #fdfdfd;
+          box-shadow: inset 0 0 0px 30px #fdfdfd;
+  margin: 150px auto;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.lovebird::before {
+  content: "";
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #fdfdfd;
+  position: absolute;
+  left: 1px;
+  top: -25px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.lovebird::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  bottom: -29px;
+  background: #fdfdfd;
+  -webkit-box-shadow: 0 15px 0 #757e82, 0 40px 0 #fdfdfd, -29px 0 0 #fdfdfd, 29px -120px 0 #fdfdfd;
+          box-shadow: 0 15px 0 #757e82, 0 40px 0 #fdfdfd, -29px 0 0 #fdfdfd, 29px -120px 0 #fdfdfd;
+}
+
+.lovebird .eye {
+  width: 10px;
+  height: 10px;
+  border-left: 5px solid #010340;
+  border-bottom: 5px solid #010340;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  position: absolute;
+  left: 5px;
+  top: -22px;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes showin {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: skewX(5deg);
+            transform: skewX(5deg);
+  }
+  90% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+  }
+  100% {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
+}
+
+@keyframes showin {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: skewX(5deg);
+            transform: skewX(5deg);
+  }
+  90% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+  }
+  100% {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
